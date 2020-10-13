@@ -53,7 +53,7 @@ app.get('/weather', (req, res) => {
         })
     }
     
-    geoCode(req.query.address, (err, {latitude, longitude, location} = {}) => {
+    geoCode(req.query.address, (err, {latitude, longitude, location, city} = {}) => {
         if(err){
             return res.send({
                 error: 'Unable to find location. Try another search'
@@ -66,6 +66,7 @@ app.get('/weather', (req, res) => {
             }
             res.send({
                 address: location,
+                city,
                 forecast: forecastData
             })
         })

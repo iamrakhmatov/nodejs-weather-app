@@ -45,6 +45,10 @@ h1{
     color: maroon;
 }
 
+#icon{
+    margin: 1rem;
+    border-radius: 100%;
+}
 .portrait{
     margin: 1rem;
     width: 300px;
